@@ -1,0 +1,429 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 28, 2021 at 10:21 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.3.29
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `test1`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fixture`
+--
+
+CREATE TABLE `fixture` (
+  `id` int(10) NOT NULL,
+  `referee` varchar(255) DEFAULT NULL,
+  `timezone` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `timestamp` varchar(255) DEFAULT NULL,
+  `periods_id` int(10) DEFAULT NULL,
+  `venue_id` int(10) DEFAULT NULL,
+  `status_id` int(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `fixture`
+--
+
+INSERT INTO `fixture` (`id`, `referee`, `timezone`, `date`, `timestamp`, `periods_id`, `venue_id`, `status_id`) VALUES
+(256201, 'J. Iida', 'UTC', '2021-06-03T19:00:00+00:00', '1622746800', 134, 134, 134),
+(256202, 'Kim Woo-Sung', 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 95, 95, 95),
+(256203, 'Adham Makhadmeh', 'UTC', '2021-06-03T14:30:00+00:00', '1622730600', 70, 70, 70),
+(256204, 'H. Kimura', 'UTC', '2021-06-03T16:30:00+00:00', '1622737800', 111, 111, 111),
+(256206, 'Mohammed Abdulla Hassan Mohammed', 'UTC', '2021-06-03T18:00:00+00:00', '1622743200', 125, 125, 125),
+(256207, 'M. Bonyadifar', 'UTC', '2021-06-03T14:00:00+00:00', '1622728800', 68, 68, 68),
+(256208, 'Ma Ning', 'UTC', '2021-06-03T17:00:00+00:00', '1622739600', 115, 115, 115),
+(256211, 'Kim Dae-Yong', 'UTC', '2021-06-03T16:45:00+00:00', '1622738700', 113, 113, 113),
+(256212, 'Ammar Ebrahim Mahfoodh', 'UTC', '2021-06-03T16:45:00+00:00', '1622738700', 114, 114, 114),
+(256214, NULL, 'UTC', '2021-06-03T06:00:00+00:00', '1622700000', 26, 26, 26),
+(293606, 'W. Roldán', 'UTC', '2021-06-03T22:00:00+00:00', '1622757600', 151, 151, 151),
+(293609, 'J. Ospina', 'UTC', '2021-06-03T20:00:00+00:00', '1622750400', 145, 145, 145),
+(362633, 'O. Nation', 'UTC', '2021-06-03T23:30:00+00:00', '1622763000', 156, 156, 156),
+(583157, 'M. Vorobjev', 'UTC', '2021-06-03T11:30:00+00:00', '1622719800', 32, 32, 32),
+(588048, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 74, 74, 74),
+(588324, NULL, 'UTC', '2021-06-03T15:30:00+00:00', '1622734200', 92, 92, 92),
+(591377, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 40, 40, 40),
+(619424, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 75, 75, 75),
+(619426, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 76, 76, 76),
+(619427, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 77, 77, 77),
+(619428, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 78, 78, 78),
+(619997, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 1, 1, 1),
+(619998, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 2, 2, 2),
+(619999, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 3, 3, 3),
+(620000, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 4, 4, 4),
+(620001, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 5, 5, 5),
+(620002, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 6, 6, 6),
+(620003, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 7, 7, 7),
+(620004, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 8, 8, 8),
+(648432, 'A. King', 'UTC', '2021-06-03T09:35:00+00:00', '1622712900', 28, 28, 28),
+(664313, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 41, 41, 41),
+(664314, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 42, 42, 42),
+(664315, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 43, 43, 43),
+(664316, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 44, 44, 44),
+(664317, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 45, 45, 45),
+(664318, NULL, 'UTC', '2021-06-03T13:30:00+00:00', '1622727000', 59, 59, 59),
+(664319, NULL, 'UTC', '2021-06-03T13:30:00+00:00', '1622727000', 60, 60, 60),
+(664320, NULL, 'UTC', '2021-06-03T13:30:00+00:00', '1622727000', 61, 61, 61),
+(665593, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 46, 46, 46),
+(665594, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 47, 47, 47),
+(665595, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 48, 48, 48),
+(665596, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 49, 49, 49),
+(665597, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 50, 50, 50),
+(665598, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 51, 51, 51),
+(665599, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 52, 52, 52),
+(665600, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 53, 53, 53),
+(665601, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 54, 54, 54),
+(665602, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 55, 55, 55),
+(666783, NULL, 'UTC', '2021-06-03T12:00:00+00:00', '1622721600', 34, 34, 34),
+(666784, NULL, 'UTC', '2021-06-03T13:30:00+00:00', '1622727000', 62, 62, 62),
+(666785, NULL, 'UTC', '2021-06-03T12:00:00+00:00', '1622721600', 35, 35, 35),
+(666786, NULL, 'UTC', '2021-06-03T12:00:00+00:00', '1622721600', 36, 36, 36),
+(666787, NULL, 'UTC', '2021-06-03T13:30:00+00:00', '1622727000', 63, 63, 63),
+(666788, NULL, 'UTC', '2021-06-03T12:00:00+00:00', '1622721600', 37, 37, 37),
+(666789, NULL, 'UTC', '2021-06-03T13:30:00+00:00', '1622727000', 64, 64, 64),
+(666790, NULL, 'UTC', '2021-06-03T13:30:00+00:00', '1622727000', 65, 65, 65),
+(666791, NULL, 'UTC', '2021-06-03T13:30:00+00:00', '1622727000', 66, 66, 66),
+(666792, NULL, 'UTC', '2021-06-03T13:30:00+00:00', '1622727000', 67, 67, 67),
+(669339, NULL, 'UTC', '2021-06-03T14:00:00+00:00', '1622728800', 69, 69, 69),
+(669757, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 79, 79, 79),
+(672742, 'L. Vuorio', 'UTC', '2021-06-03T15:30:00+00:00', '1622734200', 93, 93, 93),
+(675317, 'Szymon Marciniak, Poland', 'UTC', '2021-06-03T18:00:00+00:00', '1622743200', 126, 126, 126),
+(675318, 'N. Kajtazović', 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 96, 96, 96),
+(675684, 'I. Kristjánsson', 'UTC', '2021-06-03T19:15:00+00:00', '1622747700', 139, 139, 139),
+(675685, 'E. Eiriksson', 'UTC', '2021-06-03T19:15:00+00:00', '1622747700', 140, 140, 140),
+(675686, 'G. Einarsson', 'UTC', '2021-06-03T19:15:00+00:00', '1622747700', 141, 141, 141),
+(675815, NULL, 'UTC', '2021-06-03T19:15:00+00:00', '1622747700', 142, 142, 142),
+(682598, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 9, 9, 9),
+(685115, NULL, 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 97, 97, 97),
+(685116, NULL, 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 98, 98, 98),
+(685118, NULL, 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 99, 99, 99),
+(685119, NULL, 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 100, 100, 100),
+(685120, NULL, 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 101, 101, 101),
+(685121, NULL, 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 102, 102, 102),
+(685122, NULL, 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 103, 103, 103),
+(685594, NULL, 'UTC', '2021-06-03T21:00:00+00:00', '1622754000', 149, 149, 149),
+(685595, NULL, 'UTC', '2021-06-03T18:00:00+00:00', '1622743200', 127, 127, 127),
+(685596, NULL, 'UTC', '2021-06-03T18:00:00+00:00', '1622743200', 128, 128, 128),
+(685598, NULL, 'UTC', '2021-06-03T18:00:00+00:00', '1622743200', 129, 129, 129),
+(691124, 'Jesús Ruiz', 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 104, 104, 104),
+(691143, 'Miguel Toledo', 'UTC', '2021-06-03T17:00:00+00:00', '1622739600', 116, 116, 116),
+(692488, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 56, 56, 56),
+(692489, NULL, 'UTC', '2021-06-03T11:00:00+00:00', '1622718000', 30, 30, 30),
+(692491, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 80, 80, 80),
+(692492, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 81, 81, 81),
+(692493, NULL, 'UTC', '2021-06-03T12:00:00+00:00', '1622721600', 38, 38, 38),
+(692495, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 82, 82, 82),
+(692542, NULL, 'UTC', '2021-06-03T20:00:00+00:00', '1622750400', 146, 146, 146),
+(692833, NULL, 'UTC', '2021-06-03T11:00:00+00:00', '1622718000', 31, 31, 31),
+(692835, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 83, 83, 83),
+(693254, 'J. Krsmanovic', 'UTC', '2021-06-03T17:00:00+00:00', '1622739600', 117, 117, 117),
+(693499, 'P. Lindh', 'UTC', '2021-06-03T17:00:00+00:00', '1622739600', 118, 118, 118),
+(695640, 'M. Thompson', 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 10, 10, 10),
+(695641, 'N. Marin', 'UTC', '2021-06-03T03:00:00+00:00', '1622689200', 25, 25, 25),
+(696079, 'J. Atagana', 'UTC', '2021-06-03T02:00:00+00:00', '1622685600', 24, 24, 24),
+(696300, 'David Del Río', 'UTC', '2021-06-03T17:30:00+00:00', '1622741400', 122, 122, 122),
+(696631, NULL, 'UTC', '2021-06-03T17:00:00+00:00', '1622739600', 119, 119, 119),
+(697996, 'Javier Estrada', 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 105, 105, 105),
+(697997, 'Fábio Veríssimo', 'UTC', '2021-06-03T18:45:00+00:00', '1622745900', 133, 133, 133),
+(699100, 'Y. Bermúdez', 'UTC', '2021-06-03T15:15:00+00:00', '1622733300', 90, 90, 90),
+(699101, 'A. Velasquez', 'UTC', '2021-06-03T22:15:00+00:00', '1622758500', 154, 154, 154),
+(699537, 'Shan Dan\'ao', 'UTC', '2021-06-03T08:00:00+00:00', '1622707200', 27, 27, 27),
+(699538, 'Wang Wei', 'UTC', '2021-06-03T11:35:00+00:00', '1622720100', 33, 33, 33),
+(700089, 'Marcelo de Lima Henrique', 'UTC', '2021-06-03T22:00:00+00:00', '1622757600', 152, 152, 152),
+(700093, 'Braulio da Silva Machado', 'UTC', '2021-06-03T00:30:00+00:00', '1622680200', 20, 20, 20),
+(700097, 'Dyorgines José Padovani Andrade', 'UTC', '2021-06-03T22:00:00+00:00', '1622757600', 153, 153, 153),
+(700101, 'Ricardo Marques Ribeiro', 'UTC', '2021-06-03T00:30:00+00:00', '1622680200', 21, 21, 21),
+(700105, 'Alisson Furtado', 'UTC', '2021-06-03T19:30:00+00:00', '1622748600', 143, 143, 143),
+(700107, 'Leandro Vuaden', 'UTC', '2021-06-03T00:30:00+00:00', '1622680200', 22, 22, 22),
+(700406, NULL, 'UTC', '2021-06-03T12:00:00+00:00', '1622721600', 39, 39, 39),
+(700407, 'S. Stegemann', 'UTC', '2021-06-03T17:00:00+00:00', '1622739600', 120, 120, 120),
+(700861, NULL, 'UTC', '2021-06-03T17:00:00+00:00', '1622739600', 121, 121, 121),
+(702317, 'M. Roth', 'UTC', '2021-06-03T15:30:00+00:00', '1622734200', 94, 94, 94),
+(702702, 'M. Nhiyeh', 'UTC', '2021-06-03T20:30:00+00:00', '1622752200', 147, 147, 147),
+(702714, 'S. Guezzaz', 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 106, 106, 106),
+(702734, 'M. Bellote', 'UTC', '2021-06-03T18:15:00+00:00', '1622744100', 131, 131, 131),
+(703114, NULL, 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 107, 107, 107),
+(703438, 'M. Palomino', 'UTC', '2021-06-03T18:15:00+00:00', '1622744100', 132, 132, 132),
+(703439, 'A. Menéndez', 'UTC', '2021-06-03T20:30:00+00:00', '1622752200', 148, 148, 148),
+(703443, 'P. López', 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 108, 108, 108),
+(703630, NULL, 'UTC', '2021-06-03T00:30:00+00:00', '1622680200', 23, 23, 23),
+(703700, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 11, 11, 11),
+(703702, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 12, 12, 12),
+(703703, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 13, 13, 13),
+(704981, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 14, 14, 14),
+(705132, 'Ibrahim Nour El Din', 'UTC', '2021-06-03T19:45:00+00:00', '1622749500', 144, 144, 144),
+(705301, NULL, 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 109, 109, 109),
+(705564, NULL, 'UTC', '2021-06-03T14:30:00+00:00', '1622730600', 71, 71, 71),
+(705565, NULL, 'UTC', '2021-06-03T14:30:00+00:00', '1622730600', 72, 72, 72),
+(705567, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 84, 84, 84),
+(705568, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 85, 85, 85),
+(705721, NULL, 'UTC', '2021-06-03T16:30:00+00:00', '1622737800', 112, 112, 112),
+(705963, NULL, 'UTC', '2021-06-03T10:30:00+00:00', '1622716200', 29, 29, 29),
+(706028, 'Horia Gabriel Mladinovici, Romania', 'UTC', '2021-06-03T17:30:00+00:00', '1622741400', 123, 123, 123),
+(706278, 'S. Motta', 'UTC', '2021-06-03T15:15:00+00:00', '1622733300', 91, 91, 91),
+(706279, 'Y. Álvarez', 'UTC', '2021-06-03T17:30:00+00:00', '1622741400', 124, 124, 124),
+(706413, 'Luis Milla', 'UTC', '2021-06-03T19:00:00+00:00', '1622746800', 135, 135, 135),
+(706417, 'Glenn Nyberg, Sweden', 'UTC', '2021-06-03T16:00:00+00:00', '1622736000', 110, 110, 110),
+(706418, 'Sandro Scharer, Switzerland', 'UTC', '2021-06-03T19:00:00+00:00', '1622746800', 136, 136, 136),
+(706419, NULL, 'UTC', '2021-06-03T23:15:00+00:00', '1622762100', 155, 155, 155),
+(706420, 'Vinicius Gonçalves Dias Araujo', 'UTC', '2021-06-03T18:00:00+00:00', '1622743200', 130, 130, 130),
+(706422, 'Salim Fende Chavez', 'UTC', '2021-06-03T19:00:00+00:00', '1622746800', 137, 137, 137),
+(706444, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 86, 86, 86),
+(706774, NULL, 'UTC', '2021-06-03T14:30:00+00:00', '1622730600', 73, 73, 73),
+(706942, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 15, 15, 15),
+(714377, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 57, 57, 57),
+(714378, NULL, 'UTC', '2021-06-03T13:00:00+00:00', '1622725200', 58, 58, 58),
+(714379, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 87, 87, 87),
+(714380, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 88, 88, 88),
+(714381, NULL, 'UTC', '2021-06-03T15:00:00+00:00', '1622732400', 89, 89, 89),
+(714543, NULL, 'UTC', '2021-06-03T19:00:00+00:00', '1622746800', 138, 138, 138),
+(714544, NULL, 'UTC', '2021-06-03T21:00:00+00:00', '1622754000', 150, 150, 150),
+(714663, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 16, 16, 16),
+(736246, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 17, 17, 17),
+(736247, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 18, 18, 18),
+(736248, NULL, 'UTC', '2021-06-03T00:00:00+00:00', '1622678400', 19, 19, 19);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `goals`
+--
+
+CREATE TABLE `goals` (
+  `id` int(11) NOT NULL,
+  `team_id` int(10) NOT NULL,
+  `golas` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `league`
+--
+
+CREATE TABLE `league` (
+  `id` int(10) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `country` varchar(255) DEFAULT NULL,
+  `logo` varchar(255) DEFAULT NULL,
+  `flag` varchar(255) DEFAULT NULL,
+  `season` varchar(255) DEFAULT NULL,
+  `round` varchar(255) DEFAULT NULL,
+  `fixture_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `periods`
+--
+
+CREATE TABLE `periods` (
+  `id` int(10) NOT NULL,
+  `first` varchar(255) DEFAULT NULL,
+  `second` varchar(255) DEFAULT NULL,
+  `fixture_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `score`
+--
+
+CREATE TABLE `score` (
+  `id` int(11) NOT NULL,
+  `halftime` int(10) NOT NULL,
+  `fulltime` int(10) NOT NULL,
+  `extratime` int(10) NOT NULL,
+  `penalty` int(10) NOT NULL,
+  `teamid` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `status`
+--
+
+CREATE TABLE `status` (
+  `id` int(11) NOT NULL,
+  `long` varchar(255) DEFAULT NULL,
+  `short` varchar(255) DEFAULT NULL,
+  `elapsed` varchar(255) DEFAULT NULL,
+  `fixture_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `status`
+--
+
+INSERT INTO `status` (`id`, `long`, `short`, `elapsed`, `fixture_id`) VALUES
+(157, 'Match Cancelled', 'CANC', NULL, 619997);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teams`
+--
+
+CREATE TABLE `teams` (
+  `id` int(10) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `logo` varchar(100) NOT NULL,
+  `winner` varchar(100) NOT NULL,
+  `status` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `teams`
+--
+
+INSERT INTO `teams` (`id`, `name`, `logo`, `winner`, `status`) VALUES
+(8346, 'Union Innsbruck', 'https://media.api-sports.io/football/teams/8346.png', '', 'home');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `venue`
+--
+
+CREATE TABLE `venue` (
+  `id` int(10) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `fixture_id` int(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `venue`
+--
+
+INSERT INTO `venue` (`id`, `name`, `city`, `fixture_id`) VALUES
+(5928, 'Sportplatz Fenner Areal', 'Innsbruck', 619997);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `fixture`
+--
+ALTER TABLE `fixture`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `goals`
+--
+ALTER TABLE `goals`
+  ADD PRIMARY KEY (`id`) USING BTREE;
+
+--
+-- Indexes for table `league`
+--
+ALTER TABLE `league`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `periods`
+--
+ALTER TABLE `periods`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `score`
+--
+ALTER TABLE `score`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `status`
+--
+ALTER TABLE `status`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `teams`
+--
+ALTER TABLE `teams`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `venue`
+--
+ALTER TABLE `venue`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `fixture`
+--
+ALTER TABLE `fixture`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=736249;
+
+--
+-- AUTO_INCREMENT for table `goals`
+--
+ALTER TABLE `goals`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+
+--
+-- AUTO_INCREMENT for table `league`
+--
+ALTER TABLE `league`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+
+--
+-- AUTO_INCREMENT for table `periods`
+--
+ALTER TABLE `periods`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+
+--
+-- AUTO_INCREMENT for table `score`
+--
+ALTER TABLE `score`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+
+--
+-- AUTO_INCREMENT for table `status`
+--
+ALTER TABLE `status`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+
+--
+-- AUTO_INCREMENT for table `teams`
+--
+ALTER TABLE `teams`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8347;
+
+--
+-- AUTO_INCREMENT for table `venue`
+--
+ALTER TABLE `venue`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5929;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
