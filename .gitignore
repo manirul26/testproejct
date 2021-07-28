@@ -11,8 +11,7 @@
 ._*
 
 # Windows image file caches
-Thumbs.db
-ehthumbs.db
+
 Desktop.ini
 
 # Recycle Bin used on file shares
@@ -41,7 +40,7 @@ $RECYCLE.BIN/
 #-------------------------
 # These should never be under version control,
 # as it poses a security risk.
-.env
+
 .vagrant
 Vagrantfile
 
